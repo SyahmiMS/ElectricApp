@@ -2,6 +2,10 @@
 
 A WIP personal project to play with flutter UI , by converting design and prototype from uplabs
 
+![wip_screenshot](https://raw.githubusercontent.com/SyahmiMS/ElectricApp/blob/master/Screenshot_1.png)
+
+
+
 
 ## Usage
 
