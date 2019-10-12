@@ -1,6 +1,6 @@
 # ElecticApp using Flutter
 
-A personal project to play with flutter UI , by converting design and prototype from uplabs
+A WIP personal project to play with flutter UI , by converting design and prototype from uplabs
 
 
 ## Usage
