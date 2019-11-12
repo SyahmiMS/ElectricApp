@@ -1,4 +1,7 @@
+import 'package:electricity_app/topchart.dart';
 import 'package:flutter/material.dart';
+
+import 'bottomChart.dart';
 
 
 
@@ -17,7 +20,15 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         accentColor: Colors.white,
       ),
-      home: MyHomePage(title: 'Electricity'),
+      // home: MyHomePage(title: 'Electricity'),
+      routes: {
+        // '/': (context) => _defaultHome,
+        '/': (context) => MyHomePage(title: 'Electricity'),
+        LineChartSample2.routeName: (context) => LineChartSample2(),
+        LineChartSample3.routeName: (context) => LineChartSample3(),
+        
+        
+        }
     );
   }
 }
@@ -331,101 +342,117 @@ class _MyHomePageState extends State<MyHomePage> {
                                         borderRadius:
                                             BorderRadius.circular(10)),
                                     elevation: 4,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: <Widget>[
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(8.0),
-                                              // child: Text(
-                                              //   'Pending',
-                                              //   style: TextStyle(
-                                              //       color: Colors.orange,
-                                              //       fontSize: 10,
-                                              //       fontWeight:
-                                              //           FontWeight.bold),
-                                              // ),
-                                            ),
-                                            Spacer(),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(8.0),
-                                              child: Text(
-                                                'Current Month',
-                                                style: TextStyle(fontSize: 10),
+                                    child: Container(
+                                      // color: Colors.red,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          // Text('imhere'),
+                                          
+                                          
+                                          Row(
+
+                                          
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+
+
+                                        
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                // child: Text(
+                                                //   'Pending',
+                                                //   style: TextStyle(
+                                                //       color: Colors.orange,
+                                                //       fontSize: 10,
+                                                //       fontWeight:
+                                                //           FontWeight.bold),
+                                                // ),
                                               ),
-                                            )
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: mediaQuery.size.height * 0.02,
-                                        ),
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: <Widget>[
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  left: 10),
-                                              child: Text('105',
-                                                  style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 22)),
-                                            ),
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  left: 10),
-                                              child: Text('Units',
-                                                  style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 12,
-                                                      color: Colors.grey)),
-                                            )
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: mediaQuery.size.height * 0.02,
-                                        ),
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: <Widget>[
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  left: 10),
-                                              child: Text('970',
-                                                  style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 22)),
-                                            ),
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  left: 10),
-                                              child: Text('Amount',
-                                                  style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 12,
-                                                      color: Colors.grey)),
-                                            )
-                                          ],
-                                        )
-                                      ],
+                                              Spacer(),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: Text(
+                                                  'Current Month',
+                                                  style: TextStyle(fontSize: 10),
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          // SizedBox(
+                                          //   height: mediaQuery.size.height * 0.02,
+                                          // ),
+                                        
+                                     
+                                          Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    left: 10),
+                                                child: Text('105',
+                                                    style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 22)),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    left: 10),
+                                                child: Text('Units',
+                                                    style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 12,
+                                                        color: Colors.grey)),
+                                              )
+                                            ],
+                                          ),
+
+                                          
+                                          SizedBox(
+                                            height: mediaQuery.size.height * 0.02,
+                                          ),
+                                          Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    left: 10),
+                                                child: Text('970',
+                                                    style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 22)),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    left: 10),
+                                                child: Text('Amount',
+                                                    style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 12,
+                                                        color: Colors.grey)),
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
+                            
                                 Positioned(
                                   bottom: 4,
                                   right: 4,
@@ -444,7 +471,16 @@ class _MyHomePageState extends State<MyHomePage> {
                                       color: theme.accentColor,
                                     ),
                                   ),
-                                )
+                                ),
+                                    Positioned(
+                                  // top: 0.0,
+                                  top:  MediaQuery.of(context).size.height*0.05,
+                                  right:  MediaQuery.of(context).size.width*0.04,
+                                  child:    Container(
+                                    width: MediaQuery.of(context).size.width*0.3,
+                                    height: MediaQuery.of(context).size.height*0.1,
+                                    child: LineChartSample2()),
+                                ),
                               ],
                             ),
                           ],
@@ -455,7 +491,20 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Divider(
                             color: Colors.grey,
                           ),
-                        )
+                        ),
+
+                        Container(
+                          padding: EdgeInsets.only(left: 10.0 , bottom: 10.0
+                        ),
+                          child: Text('Usage Rate',style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold), ),),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: LineChartSample3(),
+                          ),
+
+                      
+                       
+                    
                       ],
                     ),
                   ),
